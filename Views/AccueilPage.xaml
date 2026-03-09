@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IscaeAnnuaire.Views.AccueilPage"
+             BackgroundColor="#F5F5F5">
+
+    <ScrollView>
+        <StackLayout Padding="0,0,0,20">
+
+            <!-- Header -->
+            <Grid BackgroundColor="#1B2A6B" Padding="20" HeightRequest="180">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="5">
+                    <Label Text="ISCAE"
+                           FontSize="48"
+                           FontAttributes="Bold"
+                           TextColor="#2ECC71"
+                           HorizontalOptions="Center"/>
+                    <Label Text="Institut Supérieur de Comptabilité"
+                           FontSize="13"
+                           TextColor="White"
+                           HorizontalOptions="Center"/>
+                    <Label Text="et d'Administration des Entreprises"
+                           FontSize="13"
+                           TextColor="White"
+                           HorizontalOptions="Center"/>
+                    <Label Text="Mauritanie"
+                           FontSize="12"
+                           TextColor="#2ECC71"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+            </Grid>
+
+            <!-- Stats Cards -->
+            <Label Text="Tableau de bord"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="#1B2A6B"
+                   Margin="20,20,0,10"/>
+
+            <Grid Margin="15,0" ColumnSpacing="10" RowSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Grid.Column="0"
+                        BackgroundColor="#1B2A6B"
+                        StrokeShape="RoundRectangle 15"
+                        Stroke="Transparent"
+                        Padding="15">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label Text="2" FontSize="36" FontAttributes="Bold"
+                               TextColor="#2ECC71" HorizontalOptions="Center"/>
+                        <Label Text="Départements" FontSize="13"
+                               TextColor="White" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Border>
+
+                <Border Grid.Row="0" Grid.Column="1"
+                        BackgroundColor="#2ECC71"
+                        StrokeShape="RoundRectangle 15"
+                        Stroke="Transparent"
+                        Padding="15">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label Text="10" FontSize="36" FontAttributes="Bold"
+                               TextColor="White" HorizontalOptions="Center"/>
+                        <Label Text="Filières" FontSize="13"
+                               TextColor="White" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="0"
+                        BackgroundColor="#2ECC71"
+                        StrokeShape="RoundRectangle 15"
+                        Stroke="Transparent"
+                        Padding="15">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label x:Name="LblEnseignants" Text="0"
+                               FontSize="36" FontAttributes="Bold"
+                               TextColor="White" HorizontalOptions="Center"/>
+                        <Label Text="Enseignants" FontSize="13"
+                               TextColor="White" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="1"
+                        BackgroundColor="#1B2A6B"
+                        StrokeShape="RoundRectangle 15"
+                        Stroke="Transparent"
+                        Padding="15">
+                    <StackLayout HorizontalOptions="Center">
+                        <Label x:Name="LblEtudiants" Text="0"
+                               FontSize="36" FontAttributes="Bold"
+                               TextColor="#2ECC71" HorizontalOptions="Center"/>
+                        <Label Text="Étudiants" FontSize="13"
+                               TextColor="White" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Border>
+            </Grid>
+
+            <!-- Info ISCAE -->
+            <Border Margin="15,20"
+                    BackgroundColor="White"
+                    StrokeShape="RoundRectangle 15"
+                    Stroke="Transparent"
+                    Padding="20">
+                <StackLayout Spacing="8">
+                    <Label Text="Contact ISCAE"
+                           FontSize="16" FontAttributes="Bold" TextColor="#1B2A6B"/>
+                    <Label Text="📧 contact@iscae.mr" FontSize="14" TextColor="#333"/>
+                    <Label Text="📞 +222 45 24 19 66" FontSize="14" TextColor="#333"/>
+                    <Label Text="🌐 www.iscae.mr" FontSize="14" TextColor="#2ECC71"/>
+                </StackLayout>
+            </Border>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IscaeAnnuaire.Views.FormulaireEnseignantPage"
+             Title="Enseignant"
+             BackgroundColor="#F5F5F5">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+            <Label Text="Informations générales"
+                   FontSize="16" FontAttributes="Bold" TextColor="#1B2A6B"/>
+
+            <Border BackgroundColor="White" StrokeShape="RoundRectangle 15"
+                    Stroke="Transparent" Padding="20">
+                <StackLayout Spacing="12">
+
+                    <Label Text="Nom" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Entry x:Name="EntryNom" Placeholder="Nom de famille"
+                           PlaceholderColor="Gray" TextColor="Black" BackgroundColor="White"/>
+
+                    <Label Text="Prénom" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Entry x:Name="EntryPrenom" Placeholder="Prénom"
+                           PlaceholderColor="Gray" TextColor="Black" BackgroundColor="White"/>
+
+                    <Label Text="Grade" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Picker x:Name="PickerGrade" Title="Sélectionner un grade"
+                            TextColor="Black" TitleColor="Gray">
+                        <Picker.Items>
+                            <x:String>Maître Assistant</x:String>
+                            <x:String>Maître de Conférences</x:String>
+                            <x:String>Professeur Habilité</x:String>
+                            <x:String>Technologue</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="Département" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Picker x:Name="PickerDept" Title="Sélectionner un département"
+                            TextColor="Black" TitleColor="Gray">
+                        <Picker.Items>
+                            <x:String>MED</x:String>
+                            <x:String>MQI</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                </StackLayout>
+            </Border>
+
+            <Label Text="Contact" FontSize="16" FontAttributes="Bold" TextColor="#1B2A6B"/>
+
+            <Border BackgroundColor="White" StrokeShape="RoundRectangle 15"
+                    Stroke="Transparent" Padding="20">
+                <StackLayout Spacing="12">
+
+                    <Label Text="Téléphone" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Entry x:Name="EntryTelephone" Placeholder="+222 XX XX XX XX"
+                           PlaceholderColor="Gray" TextColor="Black"
+                           BackgroundColor="White" Keyboard="Telephone"/>
+
+                    <Label Text="Email" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Entry x:Name="EntryEmail" Placeholder="email@iscae.mr"
+                           PlaceholderColor="Gray" TextColor="Black"
+                           BackgroundColor="White" Keyboard="Email"/>
+
+                </StackLayout>
+            </Border>
+
+            <Button Text="Enregistrer"
+                    BackgroundColor="#2ECC71" TextColor="White"
+                    CornerRadius="10" FontSize="16" HeightRequest="50"
+                    Clicked="OnEnregistrerClicked"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

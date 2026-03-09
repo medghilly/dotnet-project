@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IscaeAnnuaire.Views.DetailEnseignantPage"
+             Title="Détail Enseignant"
+             BackgroundColor="#F5F5F5">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+            <Border BackgroundColor="#1B2A6B"
+                    StrokeShape="RoundRectangle 15"
+                    Stroke="Transparent"
+                    Padding="20">
+                <StackLayout HorizontalOptions="Center" Spacing="8">
+                    <Border BackgroundColor="#2ECC71"
+                            StrokeShape="RoundRectangle 50"
+                            Stroke="Transparent"
+                            HeightRequest="90" WidthRequest="90"
+                            HorizontalOptions="Center">
+                        <Label x:Name="LblAvatar" TextColor="White" FontSize="36"
+                               FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Border>
+                    <Label x:Name="LblNomComplet" FontSize="20" FontAttributes="Bold"
+                           TextColor="White" HorizontalOptions="Center"/>
+                    <Label x:Name="LblGrade" FontSize="14" TextColor="#2ECC71" HorizontalOptions="Center"/>
+                    <Label x:Name="LblDept" FontSize="13" TextColor="White" HorizontalOptions="Center"/>
+                </StackLayout>
+            </Border>
+
+            <Border BackgroundColor="White"
+                    StrokeShape="RoundRectangle 15"
+                    Stroke="Transparent"
+                    Padding="20">
+                <StackLayout Spacing="15">
+                    <Label Text="Informations de contact"
+                           FontSize="16" FontAttributes="Bold" TextColor="#1B2A6B"/>
+                    <BoxView HeightRequest="1" BackgroundColor="#EEE"/>
+                    <Grid ColumnSpacing="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Text="📞" FontSize="18"/>
+                        <Label Grid.Row="0" Grid.Column="1" x:Name="LblTelephone"
+                               FontSize="14" TextColor="#333" VerticalOptions="Center"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Text="📧" FontSize="18" Margin="0,10,0,0"/>
+                        <Label Grid.Row="1" Grid.Column="1" x:Name="LblEmail"
+                               FontSize="14" TextColor="#333" VerticalOptions="Center" Margin="0,10,0,0"/>
+                    </Grid>
+                </StackLayout>
+            </Border>
+
+            <Grid ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Text="Modifier"
+                        BackgroundColor="#1B2A6B" TextColor="White"
+                        CornerRadius="10" Clicked="OnModifierClicked"/>
+
+                <Button Grid.Column="1" Text="Supprimer"
+                        BackgroundColor="#E74C3C" TextColor="White"
+                        CornerRadius="10" Clicked="OnSupprimerClicked"/>
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

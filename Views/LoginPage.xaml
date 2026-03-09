@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IscaeAnnuaire.Views.LoginPage"
+             BackgroundColor="#1B2A6B"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <StackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+            <!-- Logo -->
+            <StackLayout HorizontalOptions="Center" Spacing="5" Margin="0,40,0,30">
+                <Border BackgroundColor="#2ECC71"
+                        StrokeShape="RoundRectangle 60"
+                        Stroke="Transparent"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center">
+                    <Label Text="ISCAE"
+                           TextColor="White"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </Border>
+                <Label Text="Annuaire ISCAE"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center"/>
+                <Label Text="Mauritanie"
+                       FontSize="14"
+                       TextColor="#2ECC71"
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <!-- Formulaire Login -->
+            <Border BackgroundColor="White"
+                    StrokeShape="RoundRectangle 20"
+                    Stroke="Transparent"
+                    Padding="25">
+                <StackLayout Spacing="15">
+
+                    <Label Text="Connexion"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#1B2A6B"
+                           HorizontalOptions="Center"/>
+
+                    <Label Text="Nom d'utilisateur"
+                           TextColor="#1B2A6B"
+                           FontAttributes="Bold"
+                           FontSize="14"/>
+                    <Border StrokeShape="RoundRectangle 10"
+                            Stroke="#E0E0E0"
+                            Padding="10,5">
+                        <Entry x:Name="EntryUsername"
+                               Placeholder="admin"
+                               PlaceholderColor="Gray"
+                               TextColor="Black"
+                               BackgroundColor="Transparent"/>
+                    </Border>
+
+                    <Label Text="Mot de passe"
+                           TextColor="#1B2A6B"
+                           FontAttributes="Bold"
+                           FontSize="14"/>
+                    <Border StrokeShape="RoundRectangle 10"
+                            Stroke="#E0E0E0"
+                            Padding="10,5">
+                        <Entry x:Name="EntryPassword"
+                               Placeholder="••••••••"
+                               PlaceholderColor="Gray"
+                               TextColor="Black"
+                               BackgroundColor="Transparent"
+                               IsPassword="True"/>
+                    </Border>
+
+                    <!-- Message erreur -->
+                    <Label x:Name="LblErreur"
+                           TextColor="#E74C3C"
+                           FontSize="13"
+                           HorizontalOptions="Center"
+                           IsVisible="False"/>
+
+                    <Button Text="Se connecter"
+                            BackgroundColor="#2ECC71"
+                            TextColor="White"
+                            CornerRadius="10"
+                            FontSize="16"
+                            HeightRequest="50"
+                            Margin="0,10,0,0"
+                            Clicked="OnLoginClicked"/>
+
+                </StackLayout>
+            </Border>
+
+            <!-- Info -->
+            <Label Text="© 2025 ISCAE Mauritanie"
+                   FontSize="12"
+                   TextColor="#2ECC71"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,0"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

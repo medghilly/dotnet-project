@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IscaeAnnuaire.Views.FormulaireEtudiantPage"
+             Title="Étudiant"
+             BackgroundColor="#F5F5F5">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+            <Label Text="Informations générales"
+                   FontSize="16" FontAttributes="Bold" TextColor="#1B2A6B"/>
+
+            <Border BackgroundColor="White" StrokeShape="RoundRectangle 15"
+                    Stroke="Transparent" Padding="20">
+                <StackLayout Spacing="12">
+
+                    <Label Text="Nom" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Entry x:Name="EntryNom" Placeholder="Nom de famille"
+                           PlaceholderColor="Gray" TextColor="Black" BackgroundColor="White"/>
+
+                    <Label Text="Prénom" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Entry x:Name="EntryPrenom" Placeholder="Prénom"
+                           PlaceholderColor="Gray" TextColor="Black" BackgroundColor="White"/>
+
+                    <Label Text="CNI" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Entry x:Name="EntryCNI" Placeholder="Numéro CNI"
+                           PlaceholderColor="Gray" TextColor="Black" BackgroundColor="White"/>
+
+                    <Label Text="Filière" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Picker x:Name="PickerFiliere" Title="Sélectionner une filière"
+                            TextColor="Black" TitleColor="Gray"
+                            SelectedIndexChanged="OnFiliereChanged"/>
+
+                    <Label Text="Niveau" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Picker x:Name="PickerNiveau" Title="Sélectionner un niveau"
+                            TextColor="Black" TitleColor="Gray">
+                        <Picker.Items>
+                            <x:String>L1</x:String>
+                            <x:String>L2</x:String>
+                            <x:String>L3</x:String>
+                            <x:String>M1</x:String>
+                            <x:String>M2</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="Année académique" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Entry x:Name="EntryAnnee" Placeholder="2024-2025"
+                           PlaceholderColor="Gray" TextColor="Black" BackgroundColor="White"/>
+
+                    <Label Text="Statut" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Picker x:Name="PickerStatut" Title="Sélectionner un statut"
+                            TextColor="Black" TitleColor="Gray">
+                        <Picker.Items>
+                            <x:String>Actif</x:String>
+                            <x:String>Inactif</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                </StackLayout>
+            </Border>
+
+            <Label Text="Contact" FontSize="16" FontAttributes="Bold" TextColor="#1B2A6B"/>
+
+            <Border BackgroundColor="White" StrokeShape="RoundRectangle 15"
+                    Stroke="Transparent" Padding="20">
+                <StackLayout Spacing="12">
+
+                    <Label Text="Téléphone" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Entry x:Name="EntryTelephone" Placeholder="+222 XX XX XX XX"
+                           PlaceholderColor="Gray" TextColor="Black"
+                           BackgroundColor="White" Keyboard="Telephone"/>
+
+                    <Label Text="Email" TextColor="#1B2A6B" FontAttributes="Bold"/>
+                    <Entry x:Name="EntryEmail" Placeholder="email@iscae.mr"
+                           PlaceholderColor="Gray" TextColor="Black"
+                           BackgroundColor="White" Keyboard="Email"/>
+
+                </StackLayout>
+            </Border>
+
+            <Button Text="Enregistrer"
+                    BackgroundColor="#2ECC71" TextColor="White"
+                    CornerRadius="10" FontSize="16" HeightRequest="50"
+                    Clicked="OnEnregistrerClicked"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
